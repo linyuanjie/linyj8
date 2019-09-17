@@ -6,18 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://linyuanjie.github.io">
-  <title>个人日志 | Linx</title>
+  <title>JS常用的几种数组遍历方式以及性能分析对比实例详解 | Linx</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="个人日志">
-<meta property="og:url" content="https://linyuanjie.github.io/tags/index.html">
+  <meta name="description" content="JS数组遍历的几种方式JS数组遍历，基本就是for,forin,foreach,forof,map等等一些方法，以下介绍几种本文分析用到的数组遍历方式以及进行性能分析对比 第一种:普通for循环代码如下: 123for(j = 0; j &amp;lt; arr.length; j++) &amp;#123;&amp;#125;  简要说明: 最简单的一种，也是使用频率最高的一种，虽然性能不弱，但仍有优化空间">
+<meta name="keywords" content="IT技术,前端">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JS常用的几种数组遍历方式以及性能分析对比实例详解">
+<meta property="og:url" content="https://linyuanjie.github.io/2019/09/17/array/index.html">
 <meta property="og:site_name" content="Linx">
+<meta property="og:description" content="JS数组遍历的几种方式JS数组遍历，基本就是for,forin,foreach,forof,map等等一些方法，以下介绍几种本文分析用到的数组遍历方式以及进行性能分析对比 第一种:普通for循环代码如下: 123for(j = 0; j &amp;lt; arr.length; j++) &amp;#123;&amp;#125;  简要说明: 最简单的一种，也是使用频率最高的一种，虽然性能不弱，但仍有优化空间">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://linyuanjie.github.io/tags/index/rainbow.jpg">
-<meta property="og:updated_time" content="2019-09-16T09:55:02.721Z">
+<meta property="og:image" content="https://linyuanjie.github.io/2019/09/17/array/array.png">
+<meta property="og:updated_time" content="2019-09-17T05:32:03.168Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="个人日志">
-<meta name="twitter:image" content="https://linyuanjie.github.io/tags/index/rainbow.jpg">
+<meta name="twitter:title" content="JS常用的几种数组遍历方式以及性能分析对比实例详解">
+<meta name="twitter:description" content="JS数组遍历的几种方式JS数组遍历，基本就是for,forin,foreach,forof,map等等一些方法，以下介绍几种本文分析用到的数组遍历方式以及进行性能分析对比 第一种:普通for循环代码如下: 123for(j = 0; j &amp;lt; arr.length; j++) &amp;#123;&amp;#125;  简要说明: 最简单的一种，也是使用频率最高的一种，虽然性能不弱，但仍有优化空间">
+<meta name="twitter:image" content="https://linyuanjie.github.io/2019/09/17/array/array.png">
   
     <link rel="alternative" href="/atom.xml" title="Linx" type="application/atom+xml">
   
@@ -153,27 +157,70 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="page-" class="article article-type-page " itemscope itemprop="blogPost">
+            <article id="post-array" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      个人日志
+      JS常用的几种数组遍历方式以及性能分析对比实例详解
     </h1>
   
 
         
-        <a href="/tags/index.html" class="archive-article-date">
-  	<time datetime="2019-09-16T05:53:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-16</time>
+        <a href="/2019/09/17/array/" class="archive-article-date">
+  	<time datetime="2019-09-17T03:21:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-17</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><img src="/tags/index/rainbow.jpg" alt></p>
+        <h2 id="JS数组遍历的几种方式"><a href="#JS数组遍历的几种方式" class="headerlink" title="JS数组遍历的几种方式"></a>JS数组遍历的几种方式</h2><p>JS数组遍历，基本就是for,forin,foreach,forof,map等等一些方法，以下介绍几种本文分析用到的数组遍历方式以及进行性能分析对比</p>
+<h3 id="第一种-普通for循环"><a href="#第一种-普通for循环" class="headerlink" title="第一种:普通for循环"></a>第一种:普通for循环</h3><p>代码如下:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(j = 0; j &lt; arr.length; j++) &#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>简要说明: 最简单的一种，也是使用频率最高的一种，虽然性能不弱，但仍有优化空间</p>
+<a id="more"></a>
+<h3 id="第二种-优化版for循环"><a href="#第二种-优化版for循环" class="headerlink" title="第二种:优化版for循环"></a>第二种:优化版for循环</h3><p>代码如下:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(j = 0,len=arr.length; j &lt; len; j++) &#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>简要说明: 使用临时变量，将长度缓存起来，避免重复获取数组长度，当数组较大时优化效果才会比较明显。</p>
+<p>这种方法基本上是所有循环遍历方法中性能最高的一种</p>
+<h3 id="第三种-弱化版for循环"><a href="#第三种-弱化版for循环" class="headerlink" title="第三种:弱化版for循环"></a>第三种:弱化版for循环</h3><p>代码如下:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(j = 0; arr[j]!=null; j++) &#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>简要说明: 这种方法其实严格上也属于for循环，只不过是没有使用length判断，而使用变量本身判断</p>
+<p>实际上，这种方法的性能要远远小于普通for循环</p>
+<h3 id="第四种-foreach循环"><a href="#第四种-foreach循环" class="headerlink" title="第四种:foreach循环"></a>第四种:foreach循环</h3><p>代码如下:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">arr.forEach(<span class="keyword">function</span>(e)&#123;</span><br><span class="line"></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>简要说明: 数组自带的foreach循环，使用频率较高，实际上性能比普通for循环弱</p>
+<h3 id="第五种-foreach变种"><a href="#第五种-foreach变种" class="headerlink" title="第五种:foreach变种"></a>第五种:foreach变种</h3><p>代码如下:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Array.prototype.forEach.call(arr,<span class="keyword">function</span>(el)&#123;</span><br><span class="line"></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>简要说明: 由于foreach是Array型自带的，对于一些非这种类型的，无法直接使用(如NodeList)，所以才有了这个变种，使用这个变种可以让类似的数组拥有foreach功能。</p>
+<p>实际性能要比普通foreach弱</p>
+<h3 id="第六种-forin循环"><a href="#第六种-forin循环" class="headerlink" title="第六种:forin循环"></a>第六种:forin循环</h3><p>代码如下:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(j <span class="keyword">in</span> arr) &#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>简要说明: 这个循环很多人爱用，但实际上，经分析测试，在众多的循环遍历方式中</p>
+<p>它的效率是最低的</p>
+<h3 id="第七种-map遍历"><a href="#第七种-map遍历" class="headerlink" title="第七种:map遍历"></a>第七种:map遍历</h3><p>代码如下:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">arr.map(<span class="keyword">function</span>(n)&#123;</span><br><span class="line"></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>简要说明: 这种方式也是用的比较广泛的，虽然用起来比较优雅，但实际效率还比不上foreach</p>
+<h3 id="第八种-forof遍历-需要ES6支持"><a href="#第八种-forof遍历-需要ES6支持" class="headerlink" title="第八种:forof遍历(需要ES6支持)"></a>第八种:forof遍历(需要ES6支持)</h3><p>代码如下:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="built_in">let</span> value of arr) &#123;</span><br><span class="line"></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>简要说明: 这种方式是es6里面用到的，性能要好于forin，但仍然比不上普通for循环</p>
+<p>各种遍历方式的性能对比</p>
+<p>上述列举了几种方式都有一一做过对比分析，基本上可以得出的结论是:</p>
+<p>普通for循环才是最优雅的</p>
+<p>(PS:以上所有的代码都只是进行空的循环，没有再循环内部执行代码，仅仅是分析各自循环的时间而已)</p>
+<h3 id="性能对比截图"><a href="#性能对比截图" class="headerlink" title="性能对比截图"></a>性能对比截图</h3><p>分析结果1</p>
+<p>以下截图中的数据是，在chrome (支持es6)中运行了100次后得出的结论(每次运行10次,一共10个循环，得到的分析结果)<br><img src="/2019/09/17/array/array.png" alt></p>
 
       
 
@@ -213,6 +260,21 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">IT技术</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -263,7 +325,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://linyuanjie.github.io/tags/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://linyuanjie.github.io/2019/09/17/array/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -275,6 +337,25 @@
 </article>
 
   
+<nav id="article-nav">
+  
+    <a href="/2019/09/17/interview/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          前端面试问题总结一
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/09/16/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Hello World</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -329,7 +410,7 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
