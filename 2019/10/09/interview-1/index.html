@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="Linx">
 <meta property="og:description" content="1、用jquery让页面中有值的文本框背景色变红1234567var inputLength = $(&quot;input[type=&apos;text&apos;]&quot;).length; //获取type为text文本框个数$(&quot;input[type=&apos;text&apos;]&quot;).each(function()&amp;#123;    var textData = $(this).val();//通过循环获取文本框的数据    if(te">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-10-09T09:17:44.905Z">
+<meta property="og:updated_time" content="2019-10-09T09:48:18.563Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="前端面试问题记录">
 <meta name="twitter:description" content="1、用jquery让页面中有值的文本框背景色变红1234567var inputLength = $(&quot;input[type=&apos;text&apos;]&quot;).length; //获取type为text文本框个数$(&quot;input[type=&apos;text&apos;]&quot;).each(function()&amp;#123;    var textData = $(this).val();//通过循环获取文本框的数据    if(te">
@@ -189,6 +189,7 @@
 <h2 id="3、null-和undefined-的区别"><a href="#3、null-和undefined-的区别" class="headerlink" title="3、null 和undefined 的区别"></a>3、null 和undefined 的区别</h2><p>1、undefined<br>　表示”缺少值”，当声明了一个变量未初始化时返回的值<br>　典型用法是：<br>　　（1）变量被声明了，但没有赋值时，就等于undefined。<br>　　（2) 调用函数时，应该提供的参数没有提供，该参数等于undefined。<br>　　（3）对象没有赋值的属性，该属性的值为undefined。<br>　　（4）函数没有返回值时，默认返回undefined。</p>
 <p>2、null<br>　表示”没有对象”，代表空值，代表一个空对象指针，使用typeof运算得到object,可以认为它是一个特殊对象值。<br>　典型用法是：<br>　　（1） 作为函数的参数，表示该函数的参数不是对象。<br>　　（2） 作为对象原型链的终点</p>
 <h2 id="4、angular组件生命周期"><a href="#4、angular组件生命周期" class="headerlink" title="4、angular组件生命周期"></a>4、angular组件生命周期</h2><p>1、ngOnChanges：在ngOnInit之前， 当数据绑定输入属性的值发生变化时调用。 并且有一个SimpleChanges类型的参数，<br>它其实是一个类型为SimpleChange，并且键值为属性名的数组:<br>2、ngOnInit：在第一次ngOnChanges之后。<br>3、ngDoCheck：每次Angular变化检测时。<br>4、ngAfterContentInit：在组件使用 ng-content 指令的情况下，Angular 会在将外部内容放到视图后用。它主要用于获取通过 @ContentChild 或 @ContentChildren 属性装饰器查询的内容视图元素。<br>5、ngAfterContentChecked：在组件使用 ng-content 指令的情况下，Angular 会在检测到外部内容的绑定或者每次变化的时候调用。<br>6、ngAfterViewInit：在组件相应的视图初始化之后调用，它主要用于获取通过 @ViewChild 或 @ViewChildren 属性装饰器查询的视图元素。<br>7、ngAfterViewChecked：在子组件视图和子视图检查之后。<br>8、ngOnDestroy：在Angular销毁组件/指令之前。</p>
+<h2 id="5、前端常见跨域解决方案"><a href="#5、前端常见跨域解决方案" class="headerlink" title="5、前端常见跨域解决方案"></a>5、前端常见跨域解决方案</h2><h4 id="跨域解决方案"><a href="#跨域解决方案" class="headerlink" title="跨域解决方案"></a>跨域解决方案</h4><p>1、 通过jsonp跨域<br>2、 document.domain + iframe跨域<br>3、 location.hash + iframe<br>4、 window.name + iframe跨域<br>5、 postMessage跨域<br>6、 跨域资源共享（CORS）<br>7、 nginx代理跨域<br>8、 nodejs中间件代理跨域<br>9、 WebSocket协议跨域<br>详细访问如下链接；<br><a href="https://segmentfault.com/a/1190000011145364?utm_source=tag-newest" target="_blank" rel="noopener">https://segmentfault.com/a/1190000011145364?utm_source=tag-newest</a></p>
 
       
 
