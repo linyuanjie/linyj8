@@ -1,4 +1,5 @@
 /******/
+/******/
 (function (modules) { // webpackBootstrap
   /******/ // The module cache
   /******/
@@ -80,7 +81,7 @@
       }
 
       /**
-       * @name impush-client 
+       * @name impush-client
        * @description 这个项目让我发家致富…
        * @date 2016-12-1
        */
@@ -116,20 +117,20 @@
           var data = res.list[j].arr;
           var liTmpl = "";
           for (var i = 0, len = data.link.length; i < len; i++) {
-            var minSrc = 'https://raw.githubusercontent.com/linyuanjie/blogPicture/master/min_photos/' + data.link[i];
+            var minSrc = 'https://raw.githubusercontent.com/linyuanjie/blogPicture/master/min_photos/' + data.link[i] + '.min.jpg';
             var src = 'https://raw.githubusercontent.com/linyuanjie/blogPicture/master/photos/' + data.link[i];
             var type = data.type[i];
             var target = src + (type === 'video' ? '.mp4' : '.jpg');
-            src += '.jpg';
+            src += '';
 
             liTmpl += '<figure class="thumb" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">\
-                <a href="' + src + '" itemprop="contentUrl" data-size="640x640" data-type="' + type + '" data-target="' + target + '">\
+                <a href="' + src + '" itemprop="contentUrl" data-size="1080x1080" data-type="' + type + '" data-target="' + src + '">\
                   <img class="reward-img" data-type="' + type + '" data-src="' + minSrc + '" src="/photos/ins.j/img/empty.png" itemprop="thumbnail" onload="lzld(this)">\
                 </a>\
                 <figcaption style="display:none" itemprop="caption description">' + data.text[i] + '</figcaption>\
             </figure>';
           }
-          ulTmpl = ulTmpl + '<section class="archives album"><h1 class="year">' + data.year + '<em>' + data.month + '月</em></h1>\
+          ulTmpl = ulTmpl + '<section class="archives album"><h1 class="year">' + data.year + '年<em>' + data.month + '月</em></h1>\
         <ul class="img-box-ul">' + liTmpl + '</ul>\
         </section>';
         }
@@ -335,7 +336,7 @@
 
       var initPhotoSwipeFromDOM = function initPhotoSwipeFromDOM(gallerySelector) {
 
-        // parse slide data (url, title, size ...) from DOM elements 
+        // parse slide data (url, title, size ...) from DOM elements
         // (children of gallerySelector)
         var parseThumbnailElements = function parseThumbnailElements(el) {
           el = el.parentNode.parentNode;
@@ -352,14 +353,14 @@
 
           for (var i = 0; i < numNodes; i++) {
 
-            figureEl = thumbElements[i]; // 
+            figureEl = thumbElements[i]; //
 
-            // include only element nodes 
+            // include only element nodes
             if (figureEl.nodeType !== 1) {
               continue;
             }
 
-            linkEl = figureEl.children[0]; // 
+            linkEl = figureEl.children[0]; //
 
             size = linkEl.getAttribute('data-size').split('x');
             type = linkEl.getAttribute('data-type');
@@ -503,7 +504,7 @@
           // PhotoSwipe opened from URL
           if (fromURL) {
             if (options.galleryPIDs) {
-              // parse real index when custom PIDs are used 
+              // parse real index when custom PIDs are used
               // http://photoswipe.com/documentation/faq.html#custom-pid-in-url
               for (var j = 0; j < items.length; j++) {
                 if (items[j].pid == index) {
