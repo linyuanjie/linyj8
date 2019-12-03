@@ -6,15 +6,24 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://linyuanjie.github.io">
-  <title>Tag: 前端 | Linx</title>
+  <title>angular中指令的学习 | Linx</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Linx">
-<meta property="og:url" content="https://linyuanjie.github.io/tags/前端/index.html">
+  <meta name="description" content="指令大家应该都知道,在html中存在一些附加在元素节点上的标记,例如属性,事件等等.它们能够改变元素的行为,甚至操作DOM,改变DOM元素,以及它的各级子节点.那么,在angular中也有这样的存在,那就是指令.在 Angular 中有三种类型的指令：组件 — 组件的特殊存在,拥有模板结构型指令 — 通过添加和移除 DOM 元素改变 DOM 布局的指令,常用的有:ngIf,ngFor,ngSwit">
+<meta name="keywords" content="IT技术,前端">
+<meta property="og:type" content="article">
+<meta property="og:title" content="angular中指令的学习">
+<meta property="og:url" content="https://linyuanjie.github.io/2019/12/03/directive/index.html">
 <meta property="og:site_name" content="Linx">
+<meta property="og:description" content="指令大家应该都知道,在html中存在一些附加在元素节点上的标记,例如属性,事件等等.它们能够改变元素的行为,甚至操作DOM,改变DOM元素,以及它的各级子节点.那么,在angular中也有这样的存在,那就是指令.在 Angular 中有三种类型的指令：组件 — 组件的特殊存在,拥有模板结构型指令 — 通过添加和移除 DOM 元素改变 DOM 布局的指令,常用的有:ngIf,ngFor,ngSwit">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://linyuanjie.github.io/2019/12/03/directive/directive.png">
+<meta property="og:image" content="https://linyuanjie.github.io/2019/12/03/directive/two.png">
+<meta property="og:image" content="https://linyuanjie.github.io/2019/12/03/directive/three.png">
+<meta property="og:updated_time" content="2019-12-03T09:10:30.360Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Linx">
+<meta name="twitter:title" content="angular中指令的学习">
+<meta name="twitter:description" content="指令大家应该都知道,在html中存在一些附加在元素节点上的标记,例如属性,事件等等.它们能够改变元素的行为,甚至操作DOM,改变DOM元素,以及它的各级子节点.那么,在angular中也有这样的存在,那就是指令.在 Angular 中有三种类型的指令：组件 — 组件的特殊存在,拥有模板结构型指令 — 通过添加和移除 DOM 元素改变 DOM 布局的指令,常用的有:ngIf,ngFor,ngSwit">
+<meta name="twitter:image" content="https://linyuanjie.github.io/2019/12/03/directive/directive.png">
   
     <link rel="alternative" href="/atom.xml" title="Linx" type="application/atom+xml">
   
@@ -156,120 +165,120 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-directive" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/12/03/currency-directive/" class="archive-article-date">
-  	<time datetime="2019-12-03T09:27:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-03</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/12/03/currency-directive/">angular中自定义结构型指令--input输入框中金额格式化</a>
+    <h1 class="article-title" itemprop="name">
+      angular中指令的学习
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">IT技术</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/12/03/number-directive/" class="archive-article-date">
-  	<time datetime="2019-12-03T09:13:08.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-03</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/12/03/number-directive/">angular中自定义结构型指令--input输入框中只允许输入数字</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">IT技术</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/12/03/directive/" class="archive-article-date">
+        
+        <a href="/2019/12/03/directive/" class="archive-article-date">
   	<time datetime="2019-12-03T08:39:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-03</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/12/03/directive/">angular中指令的学习</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h2><p>大家应该都知道,在html中存在一些附加在元素节点上的标记,例如属性,事件等等.它们能够改变元素的行为,甚至操作DOM,改变DOM元素,以及它的各级子节点.<br>那么,在angular中也有这样的存在,那就是指令.<br>在 Angular 中有三种类型的指令：<br>组件 — 组件的特殊存在,拥有模板<br>结构型指令 — 通过添加和移除 DOM 元素改变 DOM 布局的指令,常用的有:<em>ngIf,</em>ngFor,ngSwitch<br>属性型指令 — 改变元素、组件或其它指令的外观和行为的指令,常用的有:NgClass,NgStyle</p>
+<a id="more"></a>
+<h3 id="组件"><a href="#组件" class="headerlink" title="组件"></a>组件</h3><p>在查看源代码,我们会发现这样的画面<br>   <img src="/2019/12/03/directive/directive.png" alt><br>所以说组件是继承指令的,只是它比较特殊,有模版</p>
+<p>同样,因为组件继承指令,在下面属性型和结构型指令的一系列操作,在组件中都是可以实现的</p>
+<p>但是因为指令的目的是为了复用,在组件中这样操作是达不到这个目的,所以强烈不推荐这样去操作.</p>
+<p>这里就不多做说明,有兴趣可以自己尝试一下</p>
+<h3 id="属性型指令"><a href="#属性型指令" class="headerlink" title="属性型指令"></a>属性型指令</h3><p>上面说道属性型指令是用来改变元素、组件或其它指令的外观和行为</p>
+<p>那么我们如何打造属于自己的属性型指令呢?</p>
+<p>首先,创建指令很像创建组件。</p>
+<p>导入 Directive 装饰器（而不再是 Component）。</p>
+<p>导入符号 Input、TemplateRef 和 ViewContainerRef，视指令类型与需求来选择</p>
+<p>给指令类添加装饰器。</p>
+<p>设置 CSS 属性选择器 ，以便在模板中标识出这个指令该应用于哪个元素。</p>
+<p>对于指令而言,至少需要一个带有@Directive装饰器的控制器类。该装饰器指定了一个用于标识属性的选择器。 控制器类实现了指令需要的指令行为。</p>
+<p>在我们存放指令的文件夹下(例如src/app/directives)下执行下面cli命令</p>
+<p>ng generate directive name(简写ng g d name)</p>
+<p>就可以快速得到src/app/directives/name.directive.ts和相应的测试文件src/app/directives/name.directive.spec.ts</p>
+<p>并且在根模块AppModule中声明这个指令类。<br>根据命令快速创建一个名为highlight的指令。基本代码如下:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"> 1 import &#123; BrowserModule &#125; from <span class="string">'@angular/platform-browser'</span>;</span><br><span class="line"> 2 import &#123; NgModule &#125; from <span class="string">'@angular/core'</span>;</span><br><span class="line"> 3 </span><br><span class="line"> 4 import &#123; AppRoutingModule &#125; from <span class="string">'./app-routing.module'</span>;</span><br><span class="line"> 5 import &#123; AppComponent &#125; from <span class="string">'./app.component'</span>;</span><br><span class="line"> 6 import &#123; HighlightDirective &#125; from <span class="string">'./directive/highlight.directive'</span>;</span><br><span class="line"> 7 </span><br><span class="line"> 8 @NgModule(&#123;</span><br><span class="line"> 9   declarations: [</span><br><span class="line">10     AppComponent,</span><br><span class="line">11     HighlightDirective,</span><br><span class="line">12   ],</span><br><span class="line">13   imports: [</span><br><span class="line">14     BrowserModule,</span><br><span class="line">15     AppRoutingModule</span><br><span class="line">16   ],</span><br><span class="line">17   providers: [],</span><br><span class="line">18   bootstrap: [AppComponent]</span><br><span class="line">19 &#125;)</span><br><span class="line">20 <span class="built_in">export</span> class AppModule &#123; &#125;</span><br></pre></td></tr></table></figure>
 
-        <div class="article-info info-on-right">
-          
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"> 1 import &#123; Directive &#125; from <span class="string">'@angular/core'</span>;</span><br><span class="line"> 2 </span><br><span class="line"> 3 @Directive(&#123;</span><br><span class="line"> 4   selector: <span class="string">'[appHighlight]'</span></span><br><span class="line"> 5 &#125;)</span><br><span class="line"> 6 <span class="built_in">export</span> class HighlightDirective &#123;</span><br><span class="line"> 7 </span><br><span class="line"> 8   <span class="function"><span class="title">constructor</span></span>() &#123; &#125;</span><br><span class="line"> 9 </span><br><span class="line">10 &#125;</span><br></pre></td></tr></table></figure>
+
+<p>Warnning</p>
+<p>和组件一样，这些指令也必须在Angular模块中进行声明</p>
+<p>指令所在的元素就是它的宿主元素<br>下面以一个实例展示如何自定义属性型指令:highlight的功能如下</p>
+<pre><code>1能够接收2个参数,其中一个为另外一个的默认值
+
+2监听宿主元素的鼠标进入和离开事件,在进入时宿主背景颜色为上述传入的值</code></pre><p>具体代码如下<br>src/app/directives/highlight.directive.ts</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"> 1 import &#123; Directive, ElementRef, HostListener, Input &#125; from <span class="string">'@angular/core'</span>;</span><br><span class="line"> 2 </span><br><span class="line"> 3 @Directive(&#123;</span><br><span class="line"> 4   //指定指令的属性型选择器</span><br><span class="line"> 5   selector: <span class="string">'[appHighlight]'</span></span><br><span class="line"> 6 &#125;)</span><br><span class="line"> 7 </span><br><span class="line"> 8 <span class="built_in">export</span> class HighlightDirective &#123;</span><br><span class="line"> 9   @Input(<span class="string">'appHighlight'</span>) highlightColor: string;</span><br><span class="line">10   @Input() defaultColor: string;</span><br><span class="line">11 </span><br><span class="line">12   //构造函数中使用 ElementRef 来注入宿主 DOM 元素的引用</span><br><span class="line">13   constructor(private el: ElementRef) &#123; &#125;</span><br><span class="line">14 </span><br><span class="line">15   //监听宿主元素mousenter事件</span><br><span class="line">16   @HostListener(<span class="string">'mouseenter'</span>) <span class="function"><span class="title">onMouseEnter</span></span>() &#123;</span><br><span class="line">17     this.highlight(this.highlightColor || this.defaultColor);</span><br><span class="line">18   &#125;</span><br><span class="line">19 </span><br><span class="line">20   //监听宿主元素mousenter事件</span><br><span class="line">21   @HostListener(<span class="string">'mouseleave'</span>) <span class="function"><span class="title">onMouseLeave</span></span>() &#123;</span><br><span class="line">22     this.highlight(null);</span><br><span class="line">23   &#125;</span><br><span class="line">24 </span><br><span class="line">25   private highlight(color: string) &#123;</span><br><span class="line">26     //ElementRef通过其 nativeElement 属性,提供直接访问宿主 DOM 元素的能力。</span><br><span class="line">27     this.el.nativeElement.style.backgroundColor = color;</span><br><span class="line">28   &#125;</span><br><span class="line">29 &#125;</span><br></pre></td></tr></table></figure>
+
+<p>宿主元素用法<br> <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;p appHighlight=<span class="string">"red"</span> defaultColor=<span class="string">"black"</span>&gt;宿主元素&lt;/p&gt; </span><br><span class="line">最终效果</span><br><span class="line">![](one.gif)</span><br></pre></td></tr></table></figure></p>
+<h3 id="结构性指令"><a href="#结构性指令" class="headerlink" title="结构性指令"></a>结构性指令</h3><p> 结构性基本知识和上面的属性型指令差不多,但是它必须导入 Input、TemplateRef 和 ViewContainerRef，因为我们必须得有值来确定的是什么样的结构.</p>
+<p>在说道结构性指令的时候,例如<em>ngIf,</em>ngFor(ngSwitch其实也有,不过是在内部),都会看到前面有一个*号,它是用来干嘛的呢?</p>
+<p>其实这里星号是一个用来简化更复杂语法的“语法糖”,从内部实现来说:以*ngIf为例,Angular 把 *ngIf 属性翻译成一个 <ng-template> 元素 并用它来包裹宿主元素</ng-template></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1 &lt;ng-template [ngIf]=<span class="string">"bool"</span>&gt;</span><br><span class="line">2   &lt;div class=<span class="string">"name"</span>&gt;&#123;&#123;hero.name&#125;&#125;&lt;/div&gt;</span><br><span class="line">3 &lt;/ng-template&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="指令-1"><a href="#指令-1" class="headerlink" title="指令"></a><ng-template>指令</ng-template></h3><p><ng-template>是一个 Angular 元素，用来渲染 HTML。 它永远不会直接显示出来。 事实上，在渲染视图之前，Angular 会把 <ng-template> 及其内容替换为一个注释。如果没有使用结构型指令，而仅仅把一些别的元素包装进 <ng-template> 中，那些元素就是不可见的。</ng-template></ng-template></ng-template></p>
+<p>在下面的这个短语”Hip! Hip! Hooray!”中，中间的这个 “Hip!”不会显示就是如此。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1 &lt;p&gt;Hip!&lt;/p&gt;</span><br><span class="line">2 &lt;ng-template&gt;</span><br><span class="line">3   &lt;p&gt;Hip!&lt;/p&gt;</span><br><span class="line">4 &lt;/ng-template&gt;</span><br><span class="line">5 &lt;p&gt;Hooray!&lt;/p&gt;</span><br></pre></td></tr></table></figure>
+
+<p>但是结构型指令会让 <ng-template> 正常工作，在下面自定义结构型指令时就会看到这一点.</ng-template></p>
+<h3 id="指令-2"><a href="#指令-2" class="headerlink" title=" 指令"></a><ng-container> 指令</ng-container></h3><p>Angular 的 <ng-container> 是一个分组元素，但它不会污染样式或元素布局，因为 Angular 压根不会把它放进 DOM 中。</ng-container></p>
+<p>下面是重新实现的条件化段落，这次使用 <ng-container>,都可以显示</ng-container></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">1 &lt;p&gt;</span><br><span class="line">2   I turned the corner</span><br><span class="line">3   &lt;ng-container *ngIf=<span class="string">"bool"</span>&gt;</span><br><span class="line">4     and saw &#123;&#123;hero.name&#125;&#125;. I waved</span><br><span class="line">5   &lt;/ng-container&gt;</span><br><span class="line">6   and continued on my way.</span><br><span class="line">7 &lt;/p&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="TemplateRef-和-ViewContainerRef"><a href="#TemplateRef-和-ViewContainerRef" class="headerlink" title="TemplateRef 和 ViewContainerRef"></a>TemplateRef 和 ViewContainerRef</h3><p>像上面简单结构型指令例子,会从 Angular 生成的 <ng-template> 元素中创建一个内嵌的视图，并把这个视图插入到一个视图容器中.可以使用TemplateRef取得 <ng-template> 的内容，并通过ViewContainerRef来访问这个视图容器。可以把它们都注入到指令的构造函数中，作为该类的私有属性,详见下面自定义结构型指令</ng-template></ng-template></p>
+<h3 id="自定义结构型属性"><a href="#自定义结构型属性" class="headerlink" title="自定义结构型属性"></a>自定义结构型属性</h3><p>我们来自定义一个名为appUnless的结构型指令,该指令的使用者会把一个 true/false 条件绑定到 [appUnless] 属性上。实现与*ngIf相反的功能</p>
+<p>具体代码如下</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">1 import &#123; Directive, TemplateRef, Input, ViewContainerRef &#125; from <span class="string">'@angular/core'</span>;</span><br><span class="line"> 2 </span><br><span class="line"> 3 @Directive(&#123;</span><br><span class="line"> 4   selector: <span class="string">'[appUnless]'</span></span><br><span class="line"> 5 &#125;)</span><br><span class="line"> 6 <span class="built_in">export</span> class UnlessDirective &#123;</span><br><span class="line"> 7 </span><br><span class="line"> 8   private hasView: boolean = <span class="literal">false</span>;</span><br><span class="line"> 9 </span><br><span class="line">10   @Input() <span class="built_in">set</span> appUnless(condition: boolean) &#123;</span><br><span class="line">11     <span class="keyword">if</span> (!condition &amp;&amp; !this.hasView) &#123;</span><br><span class="line">12       this.viewContainer.createEmbeddedView(this.templateref);</span><br><span class="line">13       this.hasView = <span class="literal">true</span>;</span><br><span class="line">14     &#125;</span><br><span class="line">15     <span class="keyword">else</span> <span class="keyword">if</span> (condition &amp;&amp; this.hasView) &#123;</span><br><span class="line">16       this.viewContainer.clear();</span><br><span class="line">17       this.hasView = <span class="literal">false</span>;</span><br><span class="line">18     &#125;</span><br><span class="line">19   &#125;</span><br><span class="line">20 </span><br><span class="line">21   constructor(</span><br><span class="line">22     private templateref: TemplateRef&lt;any&gt;,</span><br><span class="line">23     private viewContainer: ViewContainerRef</span><br><span class="line">24   ) &#123; &#125;</span><br><span class="line">25 </span><br><span class="line">26 &#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- ts里定义 condition: boolean = <span class="literal">false</span>;--&gt;</span><br><span class="line">&lt;p *appUnless=<span class="string">"condition"</span> class=<span class="string">"unless a"</span>&gt;</span><br><span class="line">  (A) This paragraph is displayed because the condition is <span class="literal">false</span>.</span><br><span class="line">&lt;/p&gt;</span><br><span class="line"></span><br><span class="line">&lt;p *appUnless=<span class="string">"!condition"</span> class=<span class="string">"unless b"</span>&gt;</span><br><span class="line">  (B) Although the condition is <span class="literal">true</span>,</span><br><span class="line">  this paragraph is displayed because appUnless is <span class="built_in">set</span> to <span class="literal">false</span>.</span><br><span class="line">&lt;/p&gt;</span><br></pre></td></tr></table></figure>
+
+<p>效果如下<br><img src="/2019/12/03/directive/two.png" alt><br>对于简单的段落，隐藏和移除之间的差异影响不大，但对于资源占用较多的组件是不一样的。 当隐藏掉一个元素时，组件的行为还在继续 —— 它仍然附加在它所属的 DOM 元素上， 它也仍在监听事件。Angular 会继续检查哪些能影响数据绑定的变更。 组件原本要做的那些事情仍在继续。所以在使用结构型指令操作时,我们需要明白这一点</p>
+<p>Warnning<br>每个宿主元素上只能有一个结构型指令,你可能试过把 *ngFor 和 *ngIf 放在同一个宿主元素上，但 Angular 不允许。这是因为你在一个元素上只能放一个结构型指令。</p>
+<h3 id="内置指令"><a href="#内置指令" class="headerlink" title="内置指令"></a>内置指令</h3><p>angular自带的有许多内置的指令,下面可以看见许多熟悉的身影:<br><img src="/2019/12/03/directive/three.png" alt></p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/zfmoney.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/wxmoney.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -285,316 +294,134 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://linyuanjie.github.io/2019/12/03/directive/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/28/variable/" class="archive-article-date">
-  	<time datetime="2019-10-28T01:19:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-28</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/2019/12/03/number-directive/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          angular中自定义结构型指令--input输入框中只允许输入数字
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/10/28/variable/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">js中const,var,let区别与用法</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/28/variable/">js中const,var,let区别与用法</a>
-    </h1>
+    <!-- 来必力City版安装代码 -->
+<div id="lv-container" data-id="city" data-uid="MTAyMC80NjY5NC8yMzIwNA==">
+	<script type="text/javascript">
+   (function(d, s) {
+       var j, e = d.getElementsByTagName(s)[0];
+
+       if (typeof LivereTower === 'function') { return; }
+
+       j = d.createElement(s);
+       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+       j.async = true;
+
+       e.parentNode.insertBefore(j, e);
+   })(document, 'script');
+	</script>
+<noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
+</div>
+<!-- City版安装代码已完成 -->
+  
+  
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">IT技术</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/09/interview-1/" class="archive-article-date">
-  	<time datetime="2019-10-09T08:42:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-09</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/09/interview-1/">前端面试问题记录</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">面试</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/09/19/debounceClick/" class="archive-article-date">
-  	<time datetime="2019-09-19T00:52:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-19</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/19/debounceClick/">js点击事件节流与防抖，防止重复提交、防止频繁重复点击</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">IT技术</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/09/18/chrome/" class="archive-article-date">
-  	<time datetime="2019-09-18T00:43:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-18</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/18/chrome/">谷歌浏览器 跨域设置</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">IT技术</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/09/17/interview/" class="archive-article-date">
-  	<time datetime="2019-09-17T07:38:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-17</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/17/interview/">前端面试问题总结一</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">面试</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/09/17/array/" class="archive-article-date">
-  	<time datetime="2019-09-17T03:21:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-17</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/17/array/">JS常用的几种数组遍历方式以及性能分析对比实例详解</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">IT技术</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/09/12/date/" class="archive-article-date">
-  	<time datetime="2019-09-12T05:59:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-12</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/12/date/">日期时间处理</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">IT技术</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/tags/前端/page/2/">2</a><a class="extend next" rel="next" href="/tags/前端/page/2/">Next &raquo;</a>
-    </nav>
   
 
 
@@ -627,9 +454,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
