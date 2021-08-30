@@ -6,15 +6,23 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://linyuanjie.github.io">
-  <title>Archives | Linx</title>
+  <title>Anagular版本升级5&gt;&gt;7 | Linx</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Linx">
-<meta property="og:url" content="https://linyuanjie.github.io/archives/page/3/index.html">
+  <meta name="description" content="Anagular项目版本升级从5&amp;gt;&amp;gt;7在版本升级之前，首先建议大家先用ng –version命令查看一下自己项目当前所有依赖的版本情况，并且在开始升级之前将所有已完成工作commit，以便于可以回退到一个比较稳定的版本，升级的时候先创建一个新分支，以备不时之需。">
+<meta name="keywords" content="IT技术,前端">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Anagular版本升级5&gt;&gt;7">
+<meta property="og:url" content="https://linyuanjie.github.io/2021/08/30/20210830/index.html">
 <meta property="og:site_name" content="Linx">
+<meta property="og:description" content="Anagular项目版本升级从5&amp;gt;&amp;gt;7在版本升级之前，首先建议大家先用ng –version命令查看一下自己项目当前所有依赖的版本情况，并且在开始升级之前将所有已完成工作commit，以便于可以回退到一个比较稳定的版本，升级的时候先创建一个新分支，以备不时之需。">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://linyuanjie.github.io/2021/08/30/20210830/ngv.png">
+<meta property="og:image" content="https://linyuanjie.github.io/2021/08/30/20210830/pagejson.png">
+<meta property="og:updated_time" content="2021-08-30T03:11:56.398Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Linx">
+<meta name="twitter:title" content="Anagular版本升级5&gt;&gt;7">
+<meta name="twitter:description" content="Anagular项目版本升级从5&amp;gt;&amp;gt;7在版本升级之前，首先建议大家先用ng –version命令查看一下自己项目当前所有依赖的版本情况，并且在开始升级之前将所有已完成工作commit，以便于可以回退到一个比较稳定的版本，升级的时候先创建一个新分支，以备不时之需。">
+<meta name="twitter:image" content="https://linyuanjie.github.io/2021/08/30/20210830/ngv.png">
   
     <link rel="alternative" href="/atom.xml" title="Linx" type="application/atom+xml">
   
@@ -156,36 +164,85 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-20210830" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Anagular版本升级5&gt;&gt;7
+    </h1>
+  
+
+        
+        <a href="/2021/08/30/20210830/" class="archive-article-date">
+  	<time datetime="2021-08-30T02:12:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-08-30</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Anagular项目版本升级从5-gt-gt-7"><a href="#Anagular项目版本升级从5-gt-gt-7" class="headerlink" title="Anagular项目版本升级从5&gt;&gt;7"></a>Anagular项目版本升级从5&gt;&gt;7</h2><p>在版本升级之前，首先建议大家先用ng –version命令查看一下自己项目当前所有依赖的版本情况，并且在开始升级之前将所有已完成工作commit，以便于可以回退到一个比较稳定的版本，升级的时候先创建一个新分支，以备不时之需。</p>
+<a id="more"></a>
+<p>1.先卸载掉你本地的angular cli版本，再安装你要升级的指定版本（以下两种命令使用其一即可）</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">升级方式一：</span><br><span class="line">npm uninstall -g @angular/cli</span><br><span class="line">npm install -g @angular/cli@11.0.2</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">升级方式二：</span><br><span class="line">npm install -g npm-upgrade</span><br><span class="line">npm update -g @angular/cli@11.0.2</span><br></pre></td></tr></table></figure>
+
+<p>查看版本 ng version<br><img src="/2021/08/30/20210830/ngv.png" alt></p>
+<p>2.在未升级版本之前，我们启动项目时会遇到这种错误警告信息：<br> <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Your global Angular CLI version (7.1.5) is greater than your <span class="built_in">local</span></span><br><span class="line">version (1.7.4). The <span class="built_in">local</span> Angular CLI version is used.</span><br></pre></td></tr></table></figure></p>
+<p>可以使用如下命令让你项目版本和你本地版本保持一致</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save-dev @angular/cli@7.1.5</span><br></pre></td></tr></table></figure>
+
+<p>3.升级项目中的angular-cli版本<br>在项目的根目录下依次执行一下命令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm uninstall angular-cli</span><br><span class="line">npm cache clean</span><br><span class="line">npm install @angular/cli@latest</span><br></pre></td></tr></table></figure>
+
+<p>4.版本更新完成之后，npm start启动项目，发现报错：<br>The serve command requires to be run in an Angular project, but a project definition could not be found.<br>解决方案：ng update @angular/cli –migrate-only –from=1.7.3<br><a href="https://stackoverflow.com/questions/53096996/angular-cli-error-the-serve-command-requires-to-be-run-in-an-angular-project-b%EF%BC%89" target="_blank" rel="noopener">https://stackoverflow.com/questions/53096996/angular-cli-error-the-serve-command-requires-to-be-run-in-an-angular-project-b%EF%BC%89</a><br>5.执行以上命令后启动项目，还是报错：compiler_cli_1.readConfiguration is not a functio<br>这是版本更新不彻底导致的，可执行命令：ng update @angular/compiler-cli –force，强制更新（资料来源：<a href="https://blog.csdn.net/qq_38904077/article/details/89259218）" target="_blank" rel="noopener">https://blog.csdn.net/qq_38904077/article/details/89259218）</a><br>6.升级完angular/cli 版本之后我们也要同步升级项目中angular 的版本<br>修改配置文件angular.json,将angular的版本修改到你想要升级的版本号<br><img src="/2021/08/30/20210830/pagejson.png" alt><br>之后删除本地node-module文件<br>使用命令npm install 从新安装依赖安装完成<br>再启动项目，编译成功。<br>7.版本升级成功之后，项目也启动成功之后，项目在编译的时候有可能会遇到一些以前一些Api不用改用写的写法方式；<br>import { Observable } from ‘rxjs/Observable’;报错的问题<br>找到报错的根源了，然后使用npm把这个组件注册进来，在项目文件夹下使用如下命令<br>npm install rxjs-compat<br>再次启动编译，编译成功；</p>
+<h3 id="用-Depcheck-去除项目没有用到的依赖"><a href="#用-Depcheck-去除项目没有用到的依赖" class="headerlink" title="用 Depcheck 去除项目没有用到的依赖"></a>用 Depcheck 去除项目没有用到的依赖</h3><p>先npm插件<br>npm i -g depcheck<br>然后再项目文件里面  package .json同级下运行命令<br>depcheck<br>结果</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">Unused dependencies</span><br><span class="line">* ajv</span><br><span class="line">* echarts-liquidfill</span><br><span class="line">* element-theme</span><br><span class="line">* express</span><br><span class="line">* requset</span><br><span class="line">* style-loader</span><br><span class="line">* vue-amap</span><br><span class="line">Unused devDependencies</span><br><span class="line">* autoprefixer</span><br><span class="line">* babel-plugin-component</span><br><span class="line">* babel-plugin-syntax-jsx</span><br><span class="line">* element-theme-chalk</span><br><span class="line">* postcss-import</span><br><span class="line">* postcss-url</span><br><span class="line">* sass-resources-loader</span><br><span class="line">Missing dependencies</span><br><span class="line">* q: .\src\api\axios.js</span><br><span class="line">* qs: .\src\api\http.js</span><br><span class="line">* compression-webpack-plugin: .\build\webpack.prod.conf.js</span><br></pre></td></tr></table></figure>
+
+<p>然后根据出来的未用到一栏，删除<br>npm uninstall ajv<br>(删除的时候根据需要手动删除未用项比较好一点)<br>结束，npm run build<br>之后你会发现 dist文件夹会小许多。</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/zfmoney.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/wxmoney.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/09/16/date/" class="archive-article-date">
-  	<time datetime="2019-09-16T05:59:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-16</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/16/date/">日期时间处理</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -201,335 +258,125 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://linyuanjie.github.io/2021/08/30/20210830/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/09/15/fmoney/" class="archive-article-date">
-  	<time datetime="2019-09-15T01:54:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-15</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2021/07/19/20210717/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">项目中常用方法总结汇总</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/15/fmoney/">input框的千分位功能</a>
-    </h1>
+    <!-- 来必力City版安装代码 -->
+<div id="lv-container" data-id="city" data-uid="MTAyMC80NjY5NC8yMzIwNA==">
+	<script type="text/javascript">
+   (function(d, s) {
+       var j, e = d.getElementsByTagName(s)[0];
+
+       if (typeof LivereTower === 'function') { return; }
+
+       j = d.createElement(s);
+       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+       j.async = true;
+
+       e.parentNode.insertBefore(j, e);
+   })(document, 'script');
+	</script>
+<noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
+</div>
+<!-- City版安装代码已完成 -->
+  
+  
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">IT技术</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/09/14/copy/" class="archive-article-date">
-  	<time datetime="2019-09-14T01:43:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-14</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/14/copy/">克隆或合并数据</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">IT技术</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/09/13/isBlank/" class="archive-article-date">
-  	<time datetime="2019-09-13T01:39:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-13</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/13/isBlank/">判断对象是否为空</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">IT技术</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/09/12/asc/" class="archive-article-date">
-  	<time datetime="2019-09-12T01:35:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-12</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/12/asc/">升序、降序方法</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">IT技术</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/09/11/arith/" class="archive-article-date">
-  	<time datetime="2019-09-11T00:42:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-11</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/11/arith/">数学中的加减乘除运算</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">IT技术</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/09/10/lunyu/" class="archive-article-date">
-  	<time datetime="2019-09-10T09:51:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-10</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/10/lunyu/">论语十二章</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">诗词</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/09/09/guiqu/" class="archive-article-date">
-  	<time datetime="2019-09-09T09:43:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-09</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/09/guiqu/">《归去来兮辞》</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">诗词</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/09/01/hello-world/" class="archive-article-date">
-  	<time datetime="2019-09-01T04:12:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/01/hello-world/">Hello World</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/archives/page/2/">&laquo; Prev</a><a class="page-number" href="/archives/">1</a><a class="page-number" href="/archives/page/2/">2</a><span class="page-number current">3</span>
-    </nav>
   
 
 
@@ -562,8 +409,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
